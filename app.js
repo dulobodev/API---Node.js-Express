@@ -1,9 +1,8 @@
-import express from "express";
-import dotenv from "dotenv";
-import mongoose from "mongoose";
+require("dotenv").config();
+const express = require("express")
+const mongoose = require("mongoose")
 
-// carrega variaveis do ambiente
-dotenv.config();
+const User = require("./usuarioModel")
 
 // pega as variaveis do ambiente e coloca em uma variavel local
 const dbUser = process.env.DB_USER;
